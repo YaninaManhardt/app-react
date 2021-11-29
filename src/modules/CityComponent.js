@@ -34,24 +34,27 @@ const ChooseCityLabel = styled.span`
   margin: 10px auto;
   font-size: 18px;
   font-weight: bold;
+  color: white;
+
 `;
 const WelcomeWeatherLogo = styled.img`
   width: 140px;
   height: 140px;
   margin: 40px auto;
+  
 `;
 const CityComponent = (props) => {
   const { updateCity, fetchWeather } = props;
   return (
     <>
       <WelcomeWeatherLogo src={"/clima-app/icons/perfect-day.svg"} />
-      <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
+      <ChooseCityLabel>Encuentra el clima de tu ciudad</ChooseCityLabel>
       <SearchBox onSubmit={fetchWeather}>
         <input
           onChange={(e) => updateCity(e.target.value)}
-          placeholder="City"
+          placeholder="Ciudad"
         />
-        <button type={"submit"}>Search</button>
+        <button type={"submit"}>Buscar</button>
       </SearchBox>
     </>
   );

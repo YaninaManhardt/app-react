@@ -30,15 +30,19 @@ const Container = styled.div`
   margin: auto;
   border-radius: 4px;
   box-shadow: 0 3px 6px 0 #555;
-  background: white;
   font-family: Montserrat;
-`;
+  background: rgba(5,7,12, 0.05);
+  color: white;
+  
+  `;
 
 const AppLabel = styled.span`
-  color: black;
+  color: white;
   margin: 20px auto;
   font-size: 18px;
   font-weight: bold;
+  color: white;
+
 `;
 const CloseButton = styled.span`
   padding: 2px 3px;
@@ -46,6 +50,7 @@ const CloseButton = styled.span`
   border-radius: 50%;
   color: white;
   position: absolute;
+  color: white,
 `;
 
 
@@ -61,7 +66,7 @@ function App() {
   };
   return (
     <Container>
-      <AppLabel>React Weather App</AppLabel>
+      <AppLabel>App del clima</AppLabel>
       {city && weather ? (
         <WeatherComponent weather={weather} city={city} />
       ) : (
